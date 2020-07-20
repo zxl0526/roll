@@ -37,5 +37,9 @@ public class Frame {
     public boolean isEnd() {
         return currentSize >= rollSize;
     }
+
+    public int getScoreByRollTime(int i) {
+        return i;
+    }
 }
 
