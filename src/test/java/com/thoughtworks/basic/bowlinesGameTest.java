@@ -63,5 +63,19 @@ public class bowlinesGameTest {
         Assert.assertTrue(bowlingGame.isEnd());
     }
 
+    @Test
+    public void should_return_false_when_given_roll_20() {
+        //given
+        BowlingGame bowlingGame = new BowlingGame(10, 2);
+
+        //when
+        for(int i =0;i<20;i++){
+            bowlingGame.roll(5);
+        }
+
+        //then
+        Assert.assertFalse(bowlingGame.isEnd());
+    }
+
 
 }
