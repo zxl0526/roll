@@ -29,6 +29,17 @@ public class FrameTest {
         assertEquals(0, frame.getScoreByRollTime(0));
         assertEquals(0, frame.getScore());
     }
+    @Test
+    public void should_return_ture_when_given_roll_0_roll_1() {
+        //given
+        Frame frame = new Frame(2);
 
+        //when
+        frame.roll(0);
+        frame.roll(1);
+
+        //then
+        Assert.assertTrue(frame.isEnd());
+    }
 
 }
